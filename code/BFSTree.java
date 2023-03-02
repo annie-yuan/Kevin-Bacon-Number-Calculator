@@ -18,11 +18,6 @@ public class BFSTree {
         this.graph = graph;//constructor set the graph to the parameter passed
         this.source = source;//set the person source(zach)
 
-        /*
-         * TODO: complete this method with the breadth-first
-         * search algorithm, modifying it to be able to
-         * provide information about distances and parents.
-         */
     	for(int node : graph.getVertices()){//for every vertex
     		distances.put(node,-1);//initialize, set distance node as -1 first
     		parents.put(node,-1);//set parents
