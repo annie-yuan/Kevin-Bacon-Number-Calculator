@@ -1,8 +1,7 @@
 //Annie Yuan
-//Dec 10th
-//this assignment process the data from adj.txt and gives the analyzed data of the actor file
+//process the data from adj.txt and gives the analyzed data of the actor file
 //input adj file with source actors and vertices
-// output the quartile mean distance components
+//output the quartile mean distance components
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,36 +11,19 @@ import java.util.Scanner;
 
 public class Program {
     /**
-     * This is the main method of your program.
      * 
      * @param args Command-line arguments
-     * @throws IOException If reading from your file had an
-     *                     error.
+     * @throws IOException If reading from  file had an error.
      */
     public static void main(String[] args)
             throws IOException {
-        /* TODO: change this source to your actor ID */
         int source = 103785; 
-
-        /*
-         * TODO: create several sample adjacency lists in
-         * text files yourself to test your code before
-         * running it on the large Kevin Bacon dataset
-         */
 
         Scanner scanner = new Scanner(new File("data/adj.txt"));      
        // Scanner scanner = new Scanner(new File("data/small-adj.txt"));// smaller version i created because the adj is too big
         IntGraphList graph = IntGraphList.read(scanner,50000);//use the read method provided, show every 50000 data read
         scanner.close();
 
-        /*
-         * TODO: you can also create custom graphs within
-         * the code as follows, but it is probably easier to
-         * just use your own test file.
-         *
-         * Example of creating graphs in code, rather than
-         * from a file:
-         */
         // Graph graph = new Graph();
         //
         // graph.addNode(1);
@@ -59,8 +41,8 @@ public class Program {
         // graph.addEdge(4, 3);
 
     	System.out.println("");
-      //  DFSTree dfsTree = new DFSTree(graph);//call the dfs tree class
-    //   printComponentReport(dfsTree);//print out the report
+        // DFSTree dfsTree = new DFSTree(graph);//call the dfs tree class
+        //printComponentReport(dfsTree);//print out the report
 
     	System.out.println("");
         BFSTree bfsTree = new BFSTree(graph, source);//call the bfs method, and put the first person in as source
