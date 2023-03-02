@@ -16,13 +16,6 @@ public class DFSTree {
 
     public DFSTree(IntGraphList graph) {//this method is ran when the class is called
         this.graph = graph;
-
-        /*
-         * TODO: complete this method with the depth-first
-         * search algorithm, modifying it to be able to
-         * provide information about parents and component
-         * sizes
-         */
     	int i = 0;
     	int id=0;//initialize actor id
     	for(int v: graph.getVertices()) {//all the vertices in the graph
@@ -78,17 +71,14 @@ public class DFSTree {
     }
 
     public int getParent(int v) {//return parent of this vertice
-        // TODO: complete this method
     	return parents.get(v);
     }
 
     public List<Integer> getComponentSizes() {
-        // TODO: complete this method
         return new ArrayList<Integer>(components.values());
     }
 
     public Map<Integer,Integer> getcomponentsSummary() {
-        // TODO: complete this method
         return  componentsSummary;
     }
 }
