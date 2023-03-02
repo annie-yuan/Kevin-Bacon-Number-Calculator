@@ -10,11 +10,9 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Program {
-    /**
-     * 
-     * @param args Command-line arguments
-     * @throws IOException If reading from  file had an error.
-     */
+    // @param args Command-line arguments
+    // @throws IOException If reading from  file had an error.
+     
     public static void main(String[] args)
             throws IOException {
         int source = 103785; 
